@@ -1,4 +1,5 @@
 ﻿@page "/square"
+@using SquareProject.Client.Components
 @using SquareProject.Client.ViewModels;
 @using global::Pages.BaseClass;
 
@@ -7,28 +8,10 @@
 <h3>Négyzet terület és került számítás</h3>
 
 
-@if (ViewModel is not null)
-{
-    <EditForm Model="@ViewModel">
-        <div class="col-4">
-            <div class="form-group">
-                <label for="Oldal">Név</label>
-                <InputText class="form-control" id="nev" @bind-Value="@ViewModel.Side" />
-            </div>
-            <button class="mt-2" type="submit" disabled="@ViewModel.IsBusy">Terület és kerület meghatározása</button>
-        </div>
-    </EditForm>
-    @if (ViewModel != null)
-    {
-        <div class="card mt-2 p-2">
-            <h5 class="card-title">Kiértékelés</h5>
-            <div class="card-body">
-                <p>Kerület: @ViewModel.Perimeter</p>
-                <p>Terület: @ViewModel.Area</p>
-            </div>
-        </div>
-    }
-}
+<CascadingValue Value="@ViewModel" Name="ViewModel">
+    <EditSquareData />
+    <ShowSquareResult />
+</CascadingValue>
 
 @code {
     [Inject]

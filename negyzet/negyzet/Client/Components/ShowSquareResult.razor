@@ -1,0 +1,17 @@
+﻿@using SquareProject.Client.ViewModels;
+
+@if (ViewModel != null)
+{
+    <div class="card mt-2 p-2">
+        <h5 class="card-title">Kiértékelés</h5>
+        <div class="card-body">
+            <p>Kerület: @ViewModel.Perimeter</p>
+            <p>Terület: @ViewModel.Area</p>
+        </div>
+    </div>
+}
+
+@code {
+    [CascadingParameter(Name = "ViewModel")]
+    private ISquareViewModel? ViewModel { get; set; }
+}

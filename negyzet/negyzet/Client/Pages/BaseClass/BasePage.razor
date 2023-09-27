@@ -1,23 +1,24 @@
 ﻿@namespace Pages.BaseClass
 @using System.ComponentModel;
+@using SquareProject.Client.ViewModels;
 @using ViewModels.BaseClass;
 
 @inherits ComponentBase
 
 @code {
 
-    [CascadingParameter(Name = "ViewModel")]
-    private IViewModelBase ViewModel { get; set; }
+    [Inject]
+    private ISquareViewModel? ViewModel { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        /*ViewModel.PropertyChanged += async (sender, e) =>
+        ViewModel.PropertyChanged += async (sender, e) =>
         {
             await InvokeAsync(() =>
             {
                 StateHasChanged();
             });
-        };*/
+        };
         await base.OnInitializedAsync();
     }
 
