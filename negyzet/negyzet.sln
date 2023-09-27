@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negyzet.Server", "negyzet\Server\negyzet.Server.csproj", "{6719F6AD-4DC5-4B0A-962B-011E0B2EE724}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "negyzet.Server", "negyzet\Server\negyzet.Server.csproj", "{6719F6AD-4DC5-4B0A-962B-011E0B2EE724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negyzet.Client", "negyzet\Client\negyzet.Client.csproj", "{A414E853-ABFE-4BD2-A04D-207F2503BD13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "negyzet.Client", "negyzet\Client\negyzet.Client.csproj", "{A414E853-ABFE-4BD2-A04D-207F2503BD13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negyzet.Shared", "negyzet\Shared\negyzet.Shared.csproj", "{86924A61-293A-4A91-9E60-F55A4FC96A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "negyzet.Shared", "negyzet\Shared\negyzet.Shared.csproj", "{86924A61-293A-4A91-9E60-F55A4FC96A41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
